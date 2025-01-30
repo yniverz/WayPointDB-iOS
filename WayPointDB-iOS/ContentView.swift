@@ -546,6 +546,10 @@ struct TrackerSettingsView: View {
                         Button("Clear Buffer") {
                             locationHelper.clearBuffer()
                         }
+                        
+                        Button("Push Buffer Now") {
+                            locationHelper.sendToServer()
+                        }
                     }
                     Section("Send Options") {
                         Text("Max Databuffer count:")
