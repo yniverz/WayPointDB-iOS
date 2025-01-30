@@ -365,7 +365,7 @@ extension LocationHelper: CLLocationManagerDelegate {
 //        }
         
         if visit.departureDate == .distantFuture {
-            sendToServer()
+            sendToServer(force: true)
             return
         }
         

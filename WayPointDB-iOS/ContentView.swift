@@ -548,7 +548,7 @@ struct TrackerSettingsView: View {
                         }
                         
                         Button("Push Buffer Now") {
-                            locationHelper.sendToServer()
+                            locationHelper.sendToServer(force: true)
                         }
                     }
                     Section("Send Options") {
