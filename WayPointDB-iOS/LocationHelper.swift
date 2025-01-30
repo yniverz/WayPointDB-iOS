@@ -365,6 +365,7 @@ extension LocationHelper: CLLocationManagerDelegate {
 //        }
         
         if visit.departureDate == .distantFuture {
+            sendToServer()
             return
         }
         
@@ -412,6 +413,11 @@ extension LocationHelper: CLLocationManagerDelegate {
             if self.traceBuffer.count < self.selectedMaxBufferSize && !force {
                 return
             }
+            
+            if self.traceBuffer.isEmpty {
+                return
+            }
+            
             self._sendToServer()
         }
     }
