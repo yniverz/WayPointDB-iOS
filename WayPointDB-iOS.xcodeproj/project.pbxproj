@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF0AABD42D4C00D200736762 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DF0AABD32D4C00CE00736762 /* .gitignore */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF0AAB7C2D4BFDD700736762 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF0AAB632D4BFDD600736762 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF0AAB6A2D4BFDD600736762;
+			remoteInfo = "WayPointDB-iOS";
+		};
+		DF0AAB862D4BFDD700736762 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF0AAB632D4BFDD600736762 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF0AAB6A2D4BFDD600736762;
+			remoteInfo = "WayPointDB-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DF0AAB6B2D4BFDD600736762 /* WayPointDB-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WayPointDB-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF0AAB7B2D4BFDD700736762 /* WayPointDB-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WayPointDB-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF0AAB852D4BFDD700736762 /* WayPointDB-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WayPointDB-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF0AABD32D4C00CE00736762 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		DF0AABBB2D4C007500736762 /* Exceptions for "WayPointDB-iOS" folder in "WayPointDB-iOS" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = DF0AAB6A2D4BFDD600736762 /* WayPointDB-iOS */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		DF0AAB6D2D4BFDD600736762 /* WayPointDB-iOS */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				DF0AABBB2D4C007500736762 /* Exceptions for "WayPointDB-iOS" folder in "WayPointDB-iOS" target */,
+			);
+			path = "WayPointDB-iOS";
+			sourceTree = "<group>";
+		};
+		DF0AAB7E2D4BFDD700736762 /* WayPointDB-iOSTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "WayPointDB-iOSTests";
+			sourceTree = "<group>";
+		};
+		DF0AAB882D4BFDD700736762 /* WayPointDB-iOSUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "WayPointDB-iOSUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF0AAB682D4BFDD600736762 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF0AAB782D4BFDD700736762 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF0AAB822D4BFDD700736762 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF0AAB622D4BFDD600736762 = {
+			isa = PBXGroup;
+			children = (
+				DF0AABD32D4C00CE00736762 /* .gitignore */,
+				DF0AAB6D2D4BFDD600736762 /* WayPointDB-iOS */,
+				DF0AAB7E2D4BFDD700736762 /* WayPointDB-iOSTests */,
+				DF0AAB882D4BFDD700736762 /* WayPointDB-iOSUITests */,
+				DF0AAB6C2D4BFDD600736762 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF0AAB6C2D4BFDD600736762 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF0AAB6B2D4BFDD600736762 /* WayPointDB-iOS.app */,
+				DF0AAB7B2D4BFDD700736762 /* WayPointDB-iOSTests.xctest */,
+				DF0AAB852D4BFDD700736762 /* WayPointDB-iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF0AAB6A2D4BFDD600736762 /* WayPointDB-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF0AAB8F2D4BFDD700736762 /* Build configuration list for PBXNativeTarget "WayPointDB-iOS" */;
+			buildPhases = (
+				DF0AAB672D4BFDD600736762 /* Sources */,
+				DF0AAB682D4BFDD600736762 /* Frameworks */,
+				DF0AAB692D4BFDD600736762 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DF0AAB6D2D4BFDD600736762 /* WayPointDB-iOS */,
+			);
+			name = "WayPointDB-iOS";
+			packageProductDependencies = (
+			);
+			productName = "WayPointDB-iOS";
+			productReference = DF0AAB6B2D4BFDD600736762 /* WayPointDB-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DF0AAB7A2D4BFDD700736762 /* WayPointDB-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF0AAB922D4BFDD700736762 /* Build configuration list for PBXNativeTarget "WayPointDB-iOSTests" */;
+			buildPhases = (
+				DF0AAB772D4BFDD700736762 /* Sources */,
+				DF0AAB782D4BFDD700736762 /* Frameworks */,
+				DF0AAB792D4BFDD700736762 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF0AAB7D2D4BFDD700736762 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DF0AAB7E2D4BFDD700736762 /* WayPointDB-iOSTests */,
+			);
+			name = "WayPointDB-iOSTests";
+			packageProductDependencies = (
+			);
+			productName = "WayPointDB-iOSTests";
+			productReference = DF0AAB7B2D4BFDD700736762 /* WayPointDB-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DF0AAB842D4BFDD700736762 /* WayPointDB-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF0AAB952D4BFDD700736762 /* Build configuration list for PBXNativeTarget "WayPointDB-iOSUITests" */;
+			buildPhases = (
+				DF0AAB812D4BFDD700736762 /* Sources */,
+				DF0AAB822D4BFDD700736762 /* Frameworks */,
+				DF0AAB832D4BFDD700736762 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF0AAB872D4BFDD700736762 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DF0AAB882D4BFDD700736762 /* WayPointDB-iOSUITests */,
+			);
+			name = "WayPointDB-iOSUITests";
+			packageProductDependencies = (
+			);
+			productName = "WayPointDB-iOSUITests";
+			productReference = DF0AAB852D4BFDD700736762 /* WayPointDB-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF0AAB632D4BFDD600736762 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					DF0AAB6A2D4BFDD600736762 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					DF0AAB7A2D4BFDD700736762 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = DF0AAB6A2D4BFDD600736762;
+					};
+					DF0AAB842D4BFDD700736762 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = DF0AAB6A2D4BFDD600736762;
+					};
+				};
+			};
+			buildConfigurationList = DF0AAB662D4BFDD600736762 /* Build configuration list for PBXProject "WayPointDB-iOS" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF0AAB622D4BFDD600736762;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = DF0AAB6C2D4BFDD600736762 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF0AAB6A2D4BFDD600736762 /* WayPointDB-iOS */,
+				DF0AAB7A2D4BFDD700736762 /* WayPointDB-iOSTests */,
+				DF0AAB842D4BFDD700736762 /* WayPointDB-iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF0AAB692D4BFDD600736762 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF0AABD42D4C00D200736762 /* .gitignore in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF0AAB792D4BFDD700736762 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF0AAB832D4BFDD700736762 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF0AAB672D4BFDD600736762 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF0AAB772D4BFDD700736762 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF0AAB812D4BFDD700736762 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF0AAB7D2D4BFDD700736762 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF0AAB6A2D4BFDD600736762 /* WayPointDB-iOS */;
+			targetProxy = DF0AAB7C2D4BFDD700736762 /* PBXContainerItemProxy */;
+		};
+		DF0AAB872D4BFDD700736762 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF0AAB6A2D4BFDD600736762 /* WayPointDB-iOS */;
+			targetProxy = DF0AAB862D4BFDD700736762 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DF0AAB8D2D4BFDD700736762 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DF0AAB8E2D4BFDD700736762 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF0AAB902D4BFDD700736762 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WayPointDB-iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 6YT3L3JGVN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WayPointDB-iOS/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "WayPointDB will Always track your location, also in the background.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "WayPointDB will Always track your location, also in the background.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "WayPointDB will Always track your location, also in the background.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "WayPointDB will Always track your location, also in the background.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yniverz.WayPointDB-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		DF0AAB912D4BFDD700736762 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WayPointDB-iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 6YT3L3JGVN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WayPointDB-iOS/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "WayPointDB will Always track your location, also in the background.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "WayPointDB will Always track your location, also in the background.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "WayPointDB will Always track your location, also in the background.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "WayPointDB will Always track your location, also in the background.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yniverz.WayPointDB-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		DF0AAB932D4BFDD700736762 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6YT3L3JGVN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yniverz.WayPointDB-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WayPointDB-iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WayPointDB-iOS";
+			};
+			name = Debug;
+		};
+		DF0AAB942D4BFDD700736762 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6YT3L3JGVN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yniverz.WayPointDB-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WayPointDB-iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WayPointDB-iOS";
+			};
+			name = Release;
+		};
+		DF0AAB962D4BFDD700736762 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6YT3L3JGVN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yniverz.WayPointDB-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "WayPointDB-iOS";
+			};
+			name = Debug;
+		};
+		DF0AAB972D4BFDD700736762 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6YT3L3JGVN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yniverz.WayPointDB-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "WayPointDB-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF0AAB662D4BFDD600736762 /* Build configuration list for PBXProject "WayPointDB-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF0AAB8D2D4BFDD700736762 /* Debug */,
+				DF0AAB8E2D4BFDD700736762 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF0AAB8F2D4BFDD700736762 /* Build configuration list for PBXNativeTarget "WayPointDB-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF0AAB902D4BFDD700736762 /* Debug */,
+				DF0AAB912D4BFDD700736762 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF0AAB922D4BFDD700736762 /* Build configuration list for PBXNativeTarget "WayPointDB-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF0AAB932D4BFDD700736762 /* Debug */,
+				DF0AAB942D4BFDD700736762 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF0AAB952D4BFDD700736762 /* Build configuration list for PBXNativeTarget "WayPointDB-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF0AAB962D4BFDD700736762 /* Debug */,
+				DF0AAB972D4BFDD700736762 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF0AAB632D4BFDD600736762 /* Project object */;
+}
