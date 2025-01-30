@@ -420,6 +420,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WayPointDB-iOS/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = WayPointDB;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "WayPointDB will Always track your location, also in the background.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "WayPointDB will Always track your location, also in the background.";
@@ -460,6 +461,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WayPointDB-iOS/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = WayPointDB;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "WayPointDB will Always track your location, also in the background.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "WayPointDB will Always track your location, also in the background.";
