@@ -96,7 +96,7 @@ struct GpsBatch: Encodable {
 }
 
 struct GpsData: Encodable {
-    let timestamp: String
+    let timestamp: Double
     let latitude: Double
     let longitude: Double
     let horizontal_accuracy: Double

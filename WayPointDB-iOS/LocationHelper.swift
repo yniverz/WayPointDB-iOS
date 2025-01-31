@@ -440,14 +440,11 @@ extension LocationHelper: CLLocationManagerDelegate {
         
         // 4. Convert our traceBuffer entries into the new GpsData format
         var gpsDataArray: [GpsData] = []
-        let dateFormatter = ISO8601DateFormatter()
         
         for item in traceBuffer {
-            let date = Date(timeIntervalSince1970: item.time)
-            let isoTime = dateFormatter.string(from: date)
             
             let gpsData = GpsData(
-                timestamp: isoTime,
+                timestamp: item.time,
                 latitude: item.lat,
                 longitude: item.lng,
                 horizontal_accuracy: item.horAcc,
