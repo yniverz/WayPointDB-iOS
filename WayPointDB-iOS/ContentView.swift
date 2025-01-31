@@ -306,7 +306,7 @@ struct HomepageView: View {
         if locationHelper.waypointdbServerHost.isEmpty {
             Text("Please add a Server Host in the Settings first.")
         } else {
-            WebView(url: locationHelper.waypointdbServerHost)
+            WebView(url: locationHelper.waypointdbServerHost + "/api/v1/account/login?api_key=" + locationHelper.waypointdbServerKey)
         }
     }
 }
@@ -319,7 +319,6 @@ struct WebView: UIViewRepresentable {
     }
     
     func makeUIView(context: Context) -> UIView {
-        // A container view that holds the toolbar and WKWebView
         let containerView = UIView()
         
         // Create the toolbar at the top
@@ -363,11 +362,15 @@ struct WebView: UIViewRepresentable {
         context.coordinator.backButton = backButton
         context.coordinator.forwardButton = forwardButton
         
-        // Add the items to the toolbar
+        // Add items to the toolbar
         toolbar.items = [backButton, fixedSpace, forwardButton, flexibleSpace, reloadButton]
         
-        // Create the WKWebView
-        let webView = WKWebView()
+        // Create a custom configuration that uses persistent storage
+        let configuration = WKWebViewConfiguration()
+        configuration.websiteDataStore = .default() // Persistent store
+        
+        // Create the WKWebView with the custom configuration
+        let webView = WKWebView(frame: .zero, configuration: configuration)
         webView.navigationDelegate = context.coordinator
         webView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -401,7 +404,7 @@ struct WebView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UIView, context: Context) {
-        // No dynamic updates for this example
+        // No dynamic updates in this example
     }
     
     // MARK: - Coordinator
@@ -450,19 +453,23 @@ struct WebView: UIViewRepresentable {
                 return
             }
             
-            // Whenever the URL changes (including JS changes), update button states.
+            // Update button states whenever the URL changes (including JS changes)
             updateNavigationButtonsState(for: webView)
         }
         
         // MARK: - Button Actions
         @objc func goBack() {
             webView?.goBack()
-            updateNavigationButtonsState(for: webView!)
+            if let webView = webView {
+                updateNavigationButtonsState(for: webView)
+            }
         }
         
         @objc func goForward() {
             webView?.goForward()
-            updateNavigationButtonsState(for: webView!)
+            if let webView = webView {
+                updateNavigationButtonsState(for: webView)
+            }
         }
         
         @objc func reloadPage() {
@@ -486,6 +493,7 @@ struct WebView: UIViewRepresentable {
         }
     }
 }
+
 
 
 struct TrackerSettingsView: View {

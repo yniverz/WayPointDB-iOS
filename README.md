@@ -1,9 +1,7 @@
 # WayPointDB-iOS
 
-An iOS [WayPointDB](https://github.com/yniverz/WayPointDB) high density companion app written in Swift.  
+An iOS WayPointDB high density companion app written in Swift.  
 This App is intended to be used with the (self hosted) [WayPointDB](https://github.com/yniverz/WayPointDB) Location Timeline service.
-
----
 
 ## Getting Started
 
@@ -21,7 +19,8 @@ This App is intended to be used with the (self hosted) [WayPointDB](https://gith
 4. **Build and Run**:
    - Press `Cmd + R` to build and run the app.
 
----
+## Configuration
+To use this app with your own WayPointDB instance, you need to enter the hostname and API key in the settings. To get an API key, refer to the [WayPointDB](https://github.com/yniverz/WayPointDB) documentation.
 
 ## Location Tracking
 
@@ -30,4 +29,4 @@ This app uses Core Location to track user location in the background. Make sure 
 ---
 
 As Apple requires any developer to publicly display their full government name when publishing an app, I will currently not be publishing this app in the App Store.
-This project uses a logo designed by [FeePik](https://www.flaticon.com/authors/freepik).
+This project uses a logo based on the design by [FeePik](https://www.flaticon.com/authors/freepik).
