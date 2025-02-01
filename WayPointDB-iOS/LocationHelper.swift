@@ -477,8 +477,12 @@ extension LocationHelper: CLLocationManagerDelegate {
         
         request.httpBody = jsonData
         
+        let sem = DispatchSemaphore.init(value: 0)
+        
         // 7. Send the data
         let task = URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
+            defer { sem.signal() }
+            
             guard let self = self else { return }
             
             // Handle networking errors
@@ -501,6 +505,8 @@ extension LocationHelper: CLLocationManagerDelegate {
             clearBuffer()
         }
         task.resume()
+        
+        sem.wait()
     }
 
     
