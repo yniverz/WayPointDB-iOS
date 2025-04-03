@@ -1,3 +1,5 @@
+[![License: NCPUL](https://img.shields.io/badge/license-NCPUL-blue.svg)](./LICENSE.md)
+
 # WayPointDB-iOS
 
 An iOS WayPointDB high density companion app written in Swift.  
