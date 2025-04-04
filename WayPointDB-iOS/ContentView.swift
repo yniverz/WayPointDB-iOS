@@ -507,7 +507,7 @@ struct TrackerSettingsView: View {
     @State private var trackingActivated = false
     @State private var alwaysHighDensity = false
     @State private var debugNotifications = false
-    @State private var selectedMaxBufferSize = 300
+    @State private var selectedMaxBufferSize = 120
     @State private var bufferLength = 0
     @State private var showingInfoSheet = false
     
