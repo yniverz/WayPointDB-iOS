@@ -431,82 +431,94 @@ extension LocationHelper: CLLocationManagerDelegate {
         // 2. Validate we have data to send and a valid host
         guard !traceBuffer.isEmpty,
               !waypointdbServerHost.isEmpty,
-              let url = URL(string: waypointdbServerHost + "/api/v1/gps/batch?api_key=\(waypointdbServerKey)")
+              let baseURL = URL(string: waypointdbServerHost + "/api/v1/gps/batch?api_key=\(waypointdbServerKey)")
         else {
             print("No data to send or invalid server host.")
             return
         }
         
+        let maxDataPoints = 300  // <-- Set your maximum number of items per request here
         
-        // 4. Convert our traceBuffer entries into the new GpsData format
-        var gpsDataArray: [GpsData] = []
-        
-        for item in traceBuffer {
+        // 3. Keep sending while traceBuffer is not empty
+        while !traceBuffer.isEmpty {
             
-            let gpsData = GpsData(
-                timestamp: item.time,
-                latitude: item.lat,
-                longitude: item.lng,
-                horizontal_accuracy: item.horAcc,
-                altitude: item.alt,
-                vertical_accuracy: item.altAcc,
-                heading: item.hdg,
-                heading_accuracy: item.hdgAcc,
-                speed: item.spd,
-                speed_accuracy: item.spdAcc
-            )
+            // 3a. Take a chunk (up to maxDataPoints) from the front of traceBuffer
+            let chunk = Array(traceBuffer.prefix(maxDataPoints))
             
-            gpsDataArray.append(gpsData)
-        }
-        
-        let gpsBatch = GpsBatch(gps_data: gpsDataArray)
-        
-        // 5. Encode to JSON
-        guard let jsonData = try? JSONEncoder().encode(gpsBatch) else {
-            print("Error encoding GPS batch data.")
-            return
-        }
-
-        // 6. Create and configure the request
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        // If your server still expects Bearer token or other auth, set it here
-        // request.setValue("Bearer \(waypointdbServerKey)", forHTTPHeaderField: "Authorization")
-        
-        request.httpBody = jsonData
-        
-        let sem = DispatchSemaphore.init(value: 0)
-        
-        // 7. Send the data
-        let task = URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
-            defer { sem.signal() }
+            // 4. Convert our chunk into the new GpsData format
+            var gpsDataArray: [GpsData] = []
+            for item in chunk {
+                let gpsData = GpsData(
+                    timestamp: item.time,
+                    latitude: item.lat,
+                    longitude: item.lng,
+                    horizontal_accuracy: item.horAcc,
+                    altitude: item.alt,
+                    vertical_accuracy: item.altAcc,
+                    heading: item.hdg,
+                    heading_accuracy: item.hdgAcc,
+                    speed: item.spd,
+                    speed_accuracy: item.spdAcc
+                )
+                gpsDataArray.append(gpsData)
+            }
             
-            guard let self = self else { return }
+            let gpsBatch = GpsBatch(gps_data: gpsDataArray)
             
-            // Handle networking errors
-            if let error = error {
-                print("Error sending data to server: \(error.localizedDescription)")
+            // 5. Encode to JSON
+            guard let jsonData = try? JSONEncoder().encode(gpsBatch) else {
+                print("Error encoding GPS batch data.")
                 return
             }
             
-            // Handle HTTP status codes
-            if let httpResponse = response as? HTTPURLResponse {
-                guard (200...299).contains(httpResponse.statusCode) else {
-                    print("Server responded with status code: \(httpResponse.statusCode)")
-                    sendNotification("\(httpResponse)", title: "HTTP Err")
+            // 6. Create and configure the request
+            var request = URLRequest(url: baseURL)
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            // If your server expects Bearer token or other auth, set it here:
+            // request.setValue("Bearer \(waypointdbServerKey)", forHTTPHeaderField: "Authorization")
+            request.httpBody = jsonData
+            
+            // 7. Use a semaphore to wait for completion before sending the next chunk
+            let sem = DispatchSemaphore(value: 0)
+            
+            // Keep track of the buffer size before sending
+            let bufferCountBeforeSend = traceBuffer.count
+            
+            let task = URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
+                defer { sem.signal() }
+                guard let self = self else { return }
+                
+                // Handle networking errors
+                if let error = error {
+                    print("Error sending data to server: \(error.localizedDescription)")
+                    // Stop sending if there's an error – no removal from traceBuffer
                     return
                 }
+                
+                // Handle HTTP status codes
+                if let httpResponse = response as? HTTPURLResponse {
+                    guard (200...299).contains(httpResponse.statusCode) else {
+                        print("Server responded with status code: \(httpResponse.statusCode)")
+                        sendNotification("\(httpResponse)", title: "HTTP Err")
+                        // Stop sending if there's a non-success status – no removal
+                        return
+                    }
+                }
+                
+                // If successful, remove the chunk we just sent from the buffer
+                print("Data successfully sent to server. Removing this chunk from the buffer.")
+                self.traceBuffer.removeFirst(chunk.count)
             }
             
-            // Optionally parse response data if needed
-            print("Data successfully sent to server. Clearing local buffer now.")
-            clearBuffer()
+            task.resume()
+            sem.wait()
+            
+            // If buffer wasn't reduced, break out (means the send failed or didn't remove items)
+            if traceBuffer.count == bufferCountBeforeSend {
+                break
+            }
         }
-        task.resume()
-        
-        sem.wait()
     }
 
     
