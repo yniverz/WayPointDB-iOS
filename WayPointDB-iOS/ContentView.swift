@@ -277,6 +277,18 @@ struct YearStatisticView: View {
         task.resume()
     }
     
+    func monthName(from monthNumber: Int) -> String {
+        var components = DateComponents()
+        components.month = monthNumber
+        let calendar = Calendar.current
+        let date = calendar.date(from: components)!
+
+        let formatter = DateFormatter()
+        formatter.locale = Locale.current
+        formatter.dateFormat = "LLLL" // Full month name
+        return formatter.string(from: date)
+    }
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -338,18 +350,25 @@ struct YearStatisticView: View {
                     }
                     
                     ForEach(totalStatistic.monthlyStats, id:\.month) { monthStat in
-                        Text("\(String(monthStat.month))")
+                        Text(monthName(from: monthStat.month))
                             .font(.system(size: 30, weight: .heavy))
                             .padding(.top)
-                            Chart {
-                                ForEach(Array(monthStat.dailyDistanceKm.enumerated()), id: \.offset) { index, dayStat in
-                                    BarMark(
-                                        x: .value("Day", index + 1), // The day value as 1, 2, 3, etc.
-                                        y: .value("Value", dayStat)
-                                    )
-                                }
+                        Chart {
+                            ForEach(Array(monthStat.dailyDistanceKm.enumerated()), id: \.offset) { index, dayStat in
+                                BarMark(
+                                    x: .value("Day", index + 1),
+                                    y: .value("Value", dayStat)
+                                )
                             }
-                            .frame(height: 200)
+                            ForEach((monthStat.dailyDistanceKm.count + 1)...31, id: \.self) { day in
+                                BarMark(
+                                    x: .value("Day", day),
+                                    y: .value("Value", 0)
+                                )
+                            }
+                        }
+                        .chartXScale(domain: 1...31)
+                        .frame(height: 200)
                     }
                 }
                 .padding()
