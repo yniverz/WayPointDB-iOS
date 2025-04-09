@@ -360,7 +360,7 @@ struct YearStatisticView: View {
                                     y: .value("Value", dayStat)
                                 )
                             }
-                            ForEach((monthStat.dailyDistanceKm.count + 1)...31, id: \.self) { day in
+                            ForEach((monthStat.dailyDistanceKm.count)...31, id: \.self) { day in
                                 BarMark(
                                     x: .value("Day", day),
                                     y: .value("Value", 0)
