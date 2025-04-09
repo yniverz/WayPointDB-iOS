@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DFC159652DA5E6150074D906 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DFC159642DA5E6100074D906 /* .gitignore */; };
+		DFC1596A2DA70C7A0074D906 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DFC159692DA70C750074D906 /* README.md */; };
+		DFC1596C2DA70C8D0074D906 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = DFC1596B2DA70C890074D906 /* LICENSE.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		DFC159642DA5E6100074D906 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		DFC159692DA70C750074D906 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DFC1596B2DA70C890074D906 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		DFE604392DA5E3CD00B5BEB3 /* WayPointDB-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WayPointDB-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE604492DA5E3CE00B5BEB3 /* WayPointDB-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WayPointDB-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE604532DA5E3CE00B5BEB3 /* WayPointDB-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WayPointDB-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +74,8 @@
 		DFE604302DA5E3CD00B5BEB3 = {
 			isa = PBXGroup;
 			children = (
+				DFC1596B2DA70C890074D906 /* LICENSE.md */,
+				DFC159692DA70C750074D906 /* README.md */,
 				DFC159642DA5E6100074D906 /* .gitignore */,
 				DFE6043B2DA5E3CD00B5BEB3 /* WayPointDB-iOS */,
 				DFE6043A2DA5E3CD00B5BEB3 /* Products */,
@@ -200,7 +206,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFC1596C2DA70C8D0074D906 /* LICENSE.md in Resources */,
 				DFC159652DA5E6150074D906 /* .gitignore in Resources */,
+				DFC1596A2DA70C7A0074D906 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
